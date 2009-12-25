@@ -1,18 +1,4 @@
-Here's a simple sketch for writing text to a SparkFun SerLCD:
-
-http://www.sparkfun.com/commerce/product_info.php?products_id=9395
-
-See it working here:
-
-http://www.youtube.com/watch?v=5dL57NjfmYM&fmt=22
-
-Since you're using the default serial output pin that Arduino also uses
-when it's being programmed, a bunch of random characters will be sent to 
-the SerLCD, including possibly a control character and then a meaningful
-character that will change a setting in the display. Therefore it's usually
-best to unhook the LCD, upload your sketch and then plug it back in. The
-text may get picked up in the middle of the display, but after a couple of
-seconds you'll be in business.
+== Introduction
 
 This sketch will write two lines to the display, one character at a time
 and then blank the screen and start over.
@@ -20,6 +6,53 @@ and then blank the screen and start over.
 There are several helper methods for you to use, take a look at the code
 for a description of what each does and how to use it.
 
-== Thanks
+== Parts
+
+First you'll need an Arduino:
+
+http://www.sparkfun.com/commerce/product_info.php?products_id=666
+
+And the reason we're here, a SparkFun SerLCD:
+
+http://www.sparkfun.com/commerce/product_info.php?products_id=9395
+
+And you'll need the Arudino programming environment to get this code
+onto your Arduino:
+
+http://www.arduino.cc/playground/Main/DevelopmentTools
+
+== Connection
+
+_Note: SparkFun sells both a 5V and 3.3V version of the SerLCD. These
+instructions are for the 5V version. If you get the 3.3V version just
+connection the 3V3 pin instead of the 5V pin listed below._
+
+Connect the 5V pin of your Arduino to the VDD pin on the SerLCD. Connect
+GND on the Arduino to GND on the SerLCD. Finally, connect digital pin 1 
+(labeled TX on the Arduino) to the RX pin on the SerLCD.
+
+Once everything is hooked up and running, here is what we should see:
+
+http://www.youtube.com/watch?v=5dL57NjfmYM&fmt=22
+
+== Notice
+
+Since you're using the default serial output pin that Arduino also uses
+when it's being programmed, a bunch of random characters will be sent to 
+the SerLCD, including possibly a control character (used to change the
+settings of the display, like the backlight brightness) and then a meaningful
+character that will change a setting in the display. Therefore it's usually
+best to unhook the LCD, upload your sketch and then plug it back in. The
+text may get picked up in the middle of the display, but after a couple of
+seconds you'll be in business.
+
+== Running
+
+Start the Arduino IDE, open up this sketch and click the Upload icon. If
+you followed the instructions above then the SerLCD is not hooked up yet.
+After the RX and TX LEDs stop blinking your code is installed and running.
+Hook up your SerLCD and you should start seeing letters!
+
+== Credits
 
 This sketch uses code from http://www.arduino.cc/playground/Learning/SparkFunSerLCD
