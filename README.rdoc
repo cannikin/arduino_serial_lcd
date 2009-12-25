@@ -23,9 +23,9 @@ http://www.arduino.cc/playground/Main/DevelopmentTools
 
 == Connection
 
-_Note: SparkFun sells both a 5V and 3.3V version of the SerLCD. These
+*Note:* SparkFun sells both a 5V and 3.3V version of the SerLCD. These
 instructions are for the 5V version. If you get the 3.3V version just
-connection the 3V3 pin instead of the 5V pin listed below._
+connection the 3V3 pin instead of the 5V pin listed below.
 
 Connect the 5V pin of your Arduino to the VDD pin on the SerLCD. Connect
 GND on the Arduino to GND on the SerLCD. Finally, connect digital pin 1 
