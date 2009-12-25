@@ -2,6 +2,10 @@ Here's a simple sketch for writing text to a SparkFun SerLCD:
 
 http://www.sparkfun.com/commerce/product_info.php?products_id=9395
 
+See it working here:
+
+http://www.youtube.com/watch?v=5dL57NjfmYM&fmt=22
+
 Since you're using the default serial output pin that Arduino also uses
 when it's being programmed, a bunch of random characters will be sent to 
 the SerLCD, including possibly a control character and then a meaningful
