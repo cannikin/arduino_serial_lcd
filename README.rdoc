@@ -1,0 +1,21 @@
+Here's a simple sketch for writing text to a SparkFun SerLCD:
+
+http://www.sparkfun.com/commerce/product_info.php?products_id=9395
+
+Since you're using the default serial output pin that Arduino also uses
+when it's being programmed, a bunch of random characters will be sent to 
+the SerLCD, including possibly a control character and then a meaningful
+character that will change a setting in the display. Therefore it's usually
+best to unhook the LCD, upload your sketch and then plug it back in. The
+text may get picked up in the middle of the display, but after a couple of
+seconds you'll be in business.
+
+This sketch will write two lines to the display, one character at a time
+and then blank the screen and start over.
+
+There are several helper methods for you to use, take a look at the code
+for a description of what each does and how to use it.
+
+== Thanks
+
+This sketch uses code from http://www.arduino.cc/playground/Learning/SparkFunSerLCD
